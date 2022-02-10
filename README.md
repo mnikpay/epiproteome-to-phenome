@@ -22,7 +22,7 @@ The second script examines the association of the identified biomakers with the 
 
 Example1 with genomic position:
 ```
-bash wrapper.sh chr5:95734724 BMI_PMID30239722
+while read line; do echo $line;sbatch generate_output_p3.sh $line phenotype_name; done < probe.pairs
 ```
 or subset the probe.list file to test a number of probes.
 
@@ -32,7 +32,6 @@ bash wrapper.sh chr5:95734724 BMI_PMID30239722
 
 The final script combines the findings and prepare the result file which describe the nature of association between biomarkers and the phenotype
 
-Example2 with genomic range:
 ```
-bash wrapper.sh chr19:45409039-45412650 LDL_PMID24097068
+while read line; do echo $line;sbatch generate_output_p3.sh $line phenotype_name; done < probe.pairs
 ```
