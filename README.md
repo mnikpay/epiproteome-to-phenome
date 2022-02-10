@@ -1,7 +1,6 @@
-# Connecting epiproteome biomarkers to phenome
-The aim of this unix package is to invetigate the contribution of epigenome-proteome pairs listed in our manuscript to a phenotype. Below, we describe each script and it's application:
-
 ## Getting Started
+
+The aim of this unix package is to invetigate the contribution of epigenome-proteome pairs listed in our manuscript to a phenotype. Below, we describe each script and it's application:
 
 The entire package can be obtained from [here](https://zenodo.org/record/5979701)
 
