@@ -26,7 +26,11 @@ bash wrapper.sh chr5:95734724 BMI_PMID30239722
 ```
 or subset the probe.list file to test a number of probes.
 
-The final script combines the findings and prepare the result file which outline
+```
+bash wrapper.sh chr5:95734724 BMI_PMID30239722
+```
+
+The final script combines the findings and prepare the result file which describe the nature of association between biomarkers and the phenotype
 
 Example2 with genomic range:
 ```
