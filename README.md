@@ -1,4 +1,4 @@
-The aim of this package is to invetigate the contribution of epigenome-proteome pairs listed in our manuscript to a phenotype. Below, we describe each script and it's application:
+The aim of this package is to invetigate the contribution of epigenome-proteome biomarker pairs listed in our manuscript to a phenotype. Below, we describe each script and it's application:
 
 The entire package can be obtained from [here](https://zenodo.org/record/5979701)
 
@@ -10,11 +10,11 @@ chmod -R 700 ./locus_annotator
 
 cd ./locus_annotator
 ```
-To conduct an analysis, first, we need to pass a phenotype ID (from OpenGWAS db) to the first script. e.g.
+The first step is to obtain GWAS datat for the phenotype of interest from OpenGWAS db. This can be done by passing its phenotype ID (from OpenGWAS db) to the first script. e.g.
 ```
-bash obtain_gwas_data_p1.sh phenotype_ID
+bash obtain_gwas_data_p1.sh ebi-a-GCST010780
 ```
-This script downloads the GWAS data for your phenotype of interest from the OpenGWAS db and prepares it in a format that is required by the second script. The script assumes access to bcftools is possible through the user PATH.
+downloads the GWAS data for COVID-19 and prepares it in a format that is required by the second script. This script assumes access to bcftools is possible through the user PATH.
 
 The second script examines the association of the identified biomakers with the phenotype of interest using Mendelian randomization, you can conduct a comprehensive search as:
 
@@ -26,8 +26,10 @@ or subset the probe.list file to test a number of probes.
 If you are using a computing cluster, you can replace the bash command with an equillent command (e.g. sbatch) to submit jobs to cluster.
 
 
-The final script combines the findings and prepare the result file which describe the nature of association between biomarkers and the phenotype
+The final script combines the findings and prepare the result file which describe the nature of association between biomarkers and the phenotype. 
 
 ```
 while read line; do echo $line;sbatch generate_output_p3.sh $line phenotype_name; done < probe.pairs
 ```
+
+Each row in the result file lists the association between a pair of biomarkers and the phenotype. The first column indicates methylation probe, send column is the phenotype ID and columns 3rd to 6th represent summary statistics from the Mendelian randomization test (B, SE, P and NSNPs). The content of remaining columns are similar to the previous columns except they describe the assocition between the protein probe and the phenotype.
