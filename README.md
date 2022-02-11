@@ -15,7 +15,7 @@ The first step is to obtain GWAS data for the phenotype of interest from OpenGWA
 ```
 bash obtain_gwas_data_p1.sh ebi-a-GCST010780
 ```
-downloads the GWAS data for COVID-19 and prepares it in a format that is required by the second script. This script assumes access to bcftools is possible through the user PATH.
+downloads the GWAS data for SARS-COV-2 and prepares it in a format that is required by the second script. This script assumes access to bcftools is possible through the user PATH.
 
 The second script examines the association of the identified biomarkers (probes) with the phenotype of interest using Mendelian randomization, you can conduct a comprehensive search as:
 
@@ -32,7 +32,7 @@ The final script combines the findings and prepares the output file which descri
 ```
 while read line; do echo $line;bash generate_output_p3.sh $line phenotype_name; done < probe.pairs
 ```
-Example of an output file that points to the association of ABO locus and severity of severity of SAR-COV-2 infection.
+Example of an output file that points to the association of ABO locus and severity of SARS-COV-2 infection.
 
 |Methylation_probe|Trait           |B        |SE       |P       |NSNP|Protein_probe|Trait           |B       |SE        |P       |NSNP|
 |-----------------|----------------|---------|---------|--------|----|-------------|----------------|--------|----------|--------|----|
