@@ -27,7 +27,7 @@ or subset the probe.list file to test a number of probes.
 If you are using a computing cluster, you can replace the bash command with an equivalent command (e.g. sbatch) to submit jobs to the cluster.
 
 
-The final script combines the findings and prepares the output file which describes the nature of associations between biomarkers and the phenotype. 
+The final script examines the results from the MR analysis (stored in phenotype ID.table file) and prepares the output file which describes the nature of associations between biomarkers and the phenotype. 
 
 ```
 while read line; do echo $line;bash generate_output_p3.sh $line phenotype_name; done < probe.pairs
