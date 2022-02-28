@@ -3,7 +3,7 @@ The aim of this unix package is to investigate the contribution of epigenome-pro
 
 The entire package can be obtained from [here](https://zenodo.org/record/6047689)
 
-then it can be accessed as:
+It can be accessed as:
 ```
 unzip epiproteomics_package.zip
 
@@ -11,11 +11,11 @@ chmod -R 700 ./epiproteomics_package
 
 cd ./epiproteomics_package
 ```
-The first step is to obtain GWAS data for the phenotype of interest from OpenGWAS db. This can be done by passing its phenotype ID (from OpenGWAS db) to the first script. e.g.
+The first step is to obtain GWAS data for the phenotype of interest from the OpenGWAS db. This can be done by passing its phenotype ID (from OpenGWAS db) to the first script. e.g.
 ```
 bash obtain_gwas_data_p1.sh ebi-a-GCST010780
 ```
-downloads the GWAS data for SARS-COV-2 and prepares it in a format that is required by the second script. 
+In the above example, the script downloads the GWAS data for SARS-COV-2 and prepares it in a format that is required by the second script. 
 
 The second script examines the association of the identified biomarkers (probes) with the phenotype of interest using Mendelian randomization, you can conduct a comprehensive search as:
 
@@ -32,7 +32,7 @@ The final script combines the findings and prepares the output file which descri
 ```
 while read line; do echo $line;bash generate_output_p3.sh $line phenotype_name; done < probe.pairs
 ```
-Example of an output file that points to the association of ABO locus and severity of SARS-COV-2 infection.
+Example of an output file that points higher methylation at ABO locus (measured by cg21160290 probe) contributes to severity of SARS-COV-2 infection by increasting the level of ABO protein (measured by ABO.9253.52.3 probe).
 
 |Methylation_probe|Trait           |B        |SE       |P       |NSNP|Protein_probe|Trait           |B       |SE        |P       |NSNP|
 |-----------------|----------------|---------|---------|--------|----|-------------|----------------|--------|----------|--------|----|
