@@ -32,10 +32,10 @@ The final script examines the results from the MR analysis (stored in phenotype 
 ```
 while read line; do echo $line;bash generate_output_p3.sh $line phenotype_name; done < probe.pairs
 ```
-Example of an output file that points higher methylation at ABO locus (measured by cg21160290 probe) contributes to severity of SARS-COV-2 infection by increasting the level of ABO protein (measured by ABO.9253.52.3 probe).
+Example of an output file that points higher methylation at ABO locus (measured by cg22535403 probe) contributes to severity of SARS-COV-2 infection by increasting the level of ABO protein (measured by ABO.9253.52.3 probe).
 
 |Methylation_probe|Trait           |B        |SE       |P       |NSNP|Protein_probe|Trait           |B       |SE        |P       |NSNP|
 |-----------------|----------------|---------|---------|--------|----|-------------|----------------|--------|----------|--------|----|
-|cg22535403       |ebi-a-GCST010780|0.07|0.01|6.03E-09|9   |ABO.9253.52.3|ebi-a-GCST010780|0.07|0.01|4.5E-11|22  |
+|cg22535403       |ebi-a-GCST010780|0.06|0.01|6.6E-09|9   |ABO.9253.52.3|ebi-a-GCST010780|0.06|0.01|7.0E-11|23 |
 
 In the above table, the first six columns describe the nature of association between the methylation probe and the phenotype. The remaining columns describe the association between the protein probe and the phenotype. The sign of effect size (B) indicates the direction of association (i.e. a positive beta indicates higher level of the probe is associated with higher level/risk of the phenotype), SE indicates standard error, P indicates p-value, NSNP indicates the number of SNPs in the instrument used to examine the association between the probe and the phenotype.
