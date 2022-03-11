@@ -36,6 +36,6 @@ Example of an output file that points higher methylation at ABO locus (measured 
 
 |Methylation_probe|Trait           |B        |SE       |P       |NSNP|Protein_probe|Trait           |B       |SE        |P       |NSNP|
 |-----------------|----------------|---------|---------|--------|----|-------------|----------------|--------|----------|--------|----|
-|cg21160290       |ebi-a-GCST010780|0.0597921|0.0102896|6.21E-09|7   |ABO.9253.52.3|ebi-a-GCST010780|0.064296|0.00986188|7.05E-11|23  |
+|cg22535403       |ebi-a-GCST010780|0.07|0.01|6.03E-09|9   |ABO.9253.52.3|ebi-a-GCST010780|0.074|0.01|4.5E-11|22  |
 
 In the above table, the first six columns describe the nature of association between the methylation probe and the phenotype. The remaining columns describe the association between the protein probe and the phenotype. The sign of effect size (B) indicates the direction of association (i.e. a positive beta indicates higher level of the probe is associated with higher level/risk of the phenotype), SE indicates standard error, P indicates p-value, NSNP indicates the number of SNPs in the instrument used to examine the association between the probe and the phenotype.
