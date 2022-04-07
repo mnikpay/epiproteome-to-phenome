@@ -1,7 +1,7 @@
 ### Description
 The aim of this unix package is to investigate the contribution of epigenome-proteome biomarker pairs listed in our manuscript to a phenotype. Below, we describe each script and their use. Users can edit the scripts to meet their requirements.
 
-The entire package can be obtained from [here](https://zenodo.org/record/6047689)
+The entire package can be obtained from [here](https://zenodo.org/record/6420589)
 
 It can be accessed as:
 ```
